@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "Carrot Extension",
+    "version": "1.0",
+    "permissions": [
+        "activeTab",
+        "gitlab.com",
+        "https://*.atlassian.net/*",
+        "https://www.efrei.fr/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://gitlab.com/*",
+                "https://*.atlassian.net/*",
+                "https://www.efrei.fr/*"
+            ],
+            "js": ["content.js"]
+        }
+    ]
+}

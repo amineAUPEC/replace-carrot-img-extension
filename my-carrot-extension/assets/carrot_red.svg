@@ -1,0 +1,8 @@
+<svg width="100" height="200" xmlns="http://www.w3.org/2000/svg">
+    <g>
+        <!-- Carrot top (green leaves) -->
+        <path d="M50 0 C30 20, 70 20, 50 40 C40 50, 60 50, 50 60 C45 65, 55 65, 50 70 C48 72, 52 72, 50 74 C49 75, 51 75, 50 76 C49 77, 51 77, 50 78 C49 79, 51 79, 50 80" fill="red" />
+        <!-- Carrot body (red root) -->
+        <path d="M50 80 L40 200 L60 200 Z" fill="red" />
+    </g>
+</svg>
