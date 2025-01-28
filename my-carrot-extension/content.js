@@ -1,9 +1,10 @@
 const images = {
-    "gitlab": "assets/carrot_green.svg",
-    "jira": "assets/carrot_red.svg",
-    "confluence": "assets/carrot_blue.svg",
-    "efrei": "assets/carrot_green.svg"
+    "gitlab": "https://raw.githubusercontent.com/amineAUPEC/replace-carrot-img-extension/refs/heads/main/my-carrot-extension/assets/carrot_green.svg",
+    "jira": "https://raw.githubusercontent.com/amineAUPEC/replace-carrot-img-extension/refs/heads/main/my-carrot-extension/assets/carrot_red.svg",
+    "confluence": "https://raw.githubusercontent.com/amineAUPEC/replace-carrot-img-extension/refs/heads/main/my-carrot-extension/assets/carrot_blue.svg",
+    "efrei": "https://raw.githubusercontent.com/amineAUPEC/replace-carrot-img-extension/refs/heads/main/my-carrot-extension/assets/carrot_green.svg"
 };
+
 
 function replaceImages() {
     const url = window.location.href;
@@ -12,16 +13,17 @@ function replaceImages() {
     if (url.includes("gitlab.com")) {
         imageSrc = images.gitlab;
         image=document.querySelector("#be-navigation-mobile > div.be-nav-tablet > a > svg");
-        image.src = chrome.runtime.getURL(imageSrc);
+        image = imageSrc;
+
     } else if (url.includes("efrei.fr")) {
         imageSrc = images.efrei;
         image=document.querySelectorAll(".logo");
-        image.src = chrome.runtime.getURL(imageSrc);
+        image.src = imageSrc;
     }
     
     if (imageSrc) {
         document.querySelectorAll("img").forEach(img => {
-            img.src = chrome.runtime.getURL(imageSrc);
+            img.src = imageSrc;
         });
     }
 
